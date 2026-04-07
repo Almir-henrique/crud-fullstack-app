@@ -87,6 +87,7 @@ git clone https://github.com/seu-usuario/seu-repo.git
 2️⃣ Instalar dependências do backend 
 cd backend
 npm install
+npm install cors
 
 3️⃣ Rodar o servidor
 node server.js
