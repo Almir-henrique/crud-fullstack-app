@@ -1,20 +1,20 @@
-# 🌊 Projeto CRUD - Vida na Água
+# 🌊 Sistema CRUD - Vida na Água
 
-## 📌 Descrição
-Este projeto é uma aplicação web completa com **CRUD (Create, Read, Update, Delete)**, desenvolvida com **Node.js, Express e MySQL**, integrada com um front-end em **HTML, CSS e JavaScript**.
+## 📌 Sobre o Projeto
+Aplicação web completa com operações CRUD (**Create, Read, Update, Delete**), desenvolvida com **Node.js, Express e MySQL**, integrada a um frontend em **HTML, CSS e JavaScript**.
 
-A aplicação permite cadastrar, listar, editar e excluir usuários em tempo real, com comunicação entre front-end e back-end via API REST.
+O sistema permite cadastrar, listar, editar e excluir usuários, com comunicação entre frontend e backend via **API REST**.
 
 ---
 
 ## 🚀 Tecnologias Utilizadas
 
-### 🔹 Front-end
+### 🔹 Frontend
 - HTML5
 - CSS3
 - JavaScript (Vanilla)
 
-### 🔹 Back-end
+### 🔹 Backend
 - Node.js
 - Express
 - MySQL2
@@ -27,28 +27,43 @@ A aplicação permite cadastrar, listar, editar e excluir usuários em tempo rea
 ---
 
 ## 📂 Estrutura do Projeto
-
+meu-crud/
+│
+├── backend/
+│ ├── server.js
+│ ├── db.js
+│ ├── package.json
+│
+├── frontend/
+│ ├── cadastro.html
+│ ├── registros.html
+│ ├── scripts/
+│ ├── styles/
+│ ├── img/
+│
+├── .gitignore
+├── README.md
 
 ---
 
 ## ⚙️ Funcionalidades
 
-### ✅ Create (Cadastrar)
-- Cadastro de usuários via formulário
-- Envio para o backend com `fetch`
+### ✅ Cadastro de usuários
+- Formulário no frontend
+- Envio via `fetch` (POST)
 - Armazenamento no MySQL
 
-### ✅ Read (Listar)
-- Listagem dinâmica na tabela
-- Consumo da API com GET
+### ✅ Listagem de usuários
+- Consumo da API (GET)
+- Exibição dinâmica na tela
 
-### ✅ Update (Atualizar)
-- Edição de dados do usuário
-- Atualização via PUT
+### ✅ Atualização
+- Edição de dados
+- Requisição PUT para o backend
 
-### ✅ Delete (Excluir)
-- Exclusão com confirmação
-- Remoção via DELETE
+### ✅ Exclusão
+- Remoção de usuários
+- Requisição DELETE
 
 ---
 
@@ -65,18 +80,18 @@ A aplicação permite cadastrar, listar, editar e excluir usuários em tempo rea
 
 ## 🛠️ Como Executar
 
-### 1. Instalar dependências
+### 1️⃣ Clonar o repositório
 ```bash
-npm install
-2. Rodar o servidor
-node server.js
-3. Iniciar MySQL (XAMPP)
-Criar banco: crud_node
-Criar tabela produtos
-4. Rodar o front-end
-Abrir cadastro.html com Live Server
+git clone https://github.com/seu-usuario/seu-repo.git
 
-🗄️ Banco de Dados
+2️⃣ Instalar dependências do backend 
+cd backend
+npm install
+
+3️⃣ Rodar o servidor
+node server.js
+
+4️⃣ Configurar banco de dados (MySQL)
 CREATE DATABASE crud_node;
 
 USE crud_node;
@@ -90,11 +105,37 @@ CREATE TABLE produtos (
   endereco VARCHAR(255),
   senha VARCHAR(100)
 );
-Objetivo
-Aprender CRUD completo
-Integrar front-end com back-end
-Trabalhar com API REST
-Manipular banco de dados MySQL
 
-👨‍💻 CRIADOR:
-Almir Henrique Dantas -matricula 
+5️⃣ Rodar o frontend
+Abra o arquivo cadastro.html com o Live Server
+
+🧠 Conceitos Aplicados
+Arquitetura cliente-servidor
+API REST
+Requisições HTTP (GET, POST, PUT, DELETE)
+Integração frontend-backend
+Persistência de dados com MySQL
+
+🧠 Conceitos Aplicados
+Arquitetura cliente-servidor
+API REST
+Requisições HTTP (GET, POST, PUT, DELETE)
+Integração frontend-backend
+Persistência de dados com MySQL
+
+🎯 Objetivo
+
+Este projeto foi desenvolvido para:
+
+Praticar CRUD completo
+Integrar frontend com backend
+Trabalhar com banco de dados relacional
+Simular um sistema real
+
+📌 Status
+
+🚧 Projeto em evolução
+
+📎 Link do Projeto
+
+👉 https://github.com/Almir-henrique/crud-fullstack-app
