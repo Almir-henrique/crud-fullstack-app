@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Alterar - Vida na Água</title>
+        <link rel="stylesheet" href="styles/indexStyle.css" />
+        <link rel="stylesheet" href="styles/responsive.css" />
+        <script type="module" src="scripts/pages/Alterar.js" defer></script>
+    </head>
+    <body>
+        <header class="menuBar">
+            <a href="index.html"
+                ><img src="img/logo.png" class="logo efeitoLink"
+            /></a>
+        </header>
+        <main class="principal">
+            <section class="cadastro-container delay">
+                <h1 style="background: transparent">Alterar usuário</h1>
+                <form class="cadastro-form" action="#">
+                    <div class="form-group">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" name="nome" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="idade">Idade</label>
+                        <input type="number" id="idade" name="idade" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="endereco">Endereco</label>
+                        <input type="text" id="endereco" name="endereco" required />
+                    </div>
+                    <div class="saudacaoTela">
+                        <div class="saudacaoBox">
+                            <p>
+                                Obrigado por ajudar nosso planeta! <br/>
+                                Você será direcionado para a página principal.
+                            </p>
+                            <a href="index.html">
+                                <button type="button" class="btn btnSaudacao">
+                                    Ok
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+                <button class="btn" id="btnAlterar">Alterar</button>
+            </section>
+        </main>
+
+        <footer class="rodape">
+            <p>© 2025 Vida na Água &mdash; Juntos pelos oceanos</p>
+        </footer>
+    </body>
+</html>

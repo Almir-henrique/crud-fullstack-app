@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contador de Água Economizada</title>
+        <link rel="stylesheet" href="styles/indexStyle.css" />
+        <link rel="stylesheet" href="styles/responsive.css" />
+        <script src="scripts/pages/MenuBurguer.js" defer></script>
+        <script type="module" src="scripts/pages/contador.js" defer></script>
+    </head>
+    <body>
+        <header class="menuBar">
+            <a href="index.html"><img src="img/logo.png" class="logo" /></a>
+            <nav class="nav">
+                <a href="index.html" class="efeitoLink">Início</a>
+                <a href="sobre.html" class="efeitoLink">Conheça a ODS</a>
+                <a href="cadastro.html" class="efeitoLink">Cadastre-se</a>
+                <span class="fechar">X</span>
+            </nav>
+            <img src="img/icons/menuBurguer.png" alt="" class="menuBurguer" />
+        </header>
+
+        <main class="principal principalContador">
+            <section class="containerContador delay">
+                <h1>Selecione seus hábitos para calcular a água economizada</h1>
+                <form id="habitos">
+                    <label class="efeitoLink">
+                        <input
+                            class="check"
+                            type="checkbox"
+                            name="habito"
+                            value="10"
+                        />
+                        Tomar banho de 5 minutos </label
+                    ><br />
+                    <label class="efeitoLink">
+                        <input
+                            class="check"
+                            type="checkbox"
+                            name="habito"
+                            value="20"
+                        />
+                        Fechar a torneira ao escovar os dentes </label
+                    ><br />
+                    <label class="efeitoLink">
+                        <input
+                            class="check"
+                            type="checkbox"
+                            name="habito"
+                            value="15"
+                        />
+                        Lavar a louça com a torneira fechada </label
+                    ><br />
+                    <label class="efeitoLink">
+                        <input
+                            class="check"
+                            type="checkbox"
+                            name="habito"
+                            value="30"
+                        />
+                        Usar balde para lavar o carro </label
+                    ><br />
+                </form>
+                <div id="resultado" class="escondido">
+                    <p>
+                        Você economiza
+                        <span id="litrosEconomizados">0</span> litros!
+                    </p>
+                </div>
+            </section>
+            <button
+                class="btn btnImprimir"
+                id="btnImprimir"
+                onclick="window.print()"
+            >
+                🖨️ Imprimir hábitos
+            </button>
+        </main>
+        <footer class="rodape">
+            <p>© 2025 Vida na Água &mdash; Juntos pelos oceanos</p>
+        </footer>
+    </body>
+</html>

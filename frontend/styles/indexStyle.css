@@ -1,0 +1,631 @@
+/*================
+ PÁGINA PRINCIPAL
+==================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.1rem;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #e6f6f8;
+    color: #0a3d62;
+}
+
+:root {
+    --azul-escuro: #0b3d59;
+    --azul: #175375;
+    --azul-claro: #e6f6f9;
+    --texto: #0b3d59;
+}
+
+@keyframes back {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+@keyframes delay {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.delay {
+    animation: delay 1s ease-out;
+}
+
+.menuBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--azul);
+    padding-inline: 20px;
+    height: 100px;
+}
+
+.menuBurguer {
+    display: none;
+}
+
+.fechar {
+    display: none;
+    color: white;
+}
+
+.logo {
+    filter: brightness(10000);
+    width: 150px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.nav {
+    display: flex;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #e6f6f8;
+    transition: color 0.4s;
+    font-weight: 500;
+}
+
+.principal {
+    min-height: calc(100vh - 150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+    text-align: center;
+    background: url(../img/background.png);
+    background-size: 150%;
+    background-position: 0% 0%;
+    animation: back 40s linear infinite;
+}
+
+.principalConteudo h1 {
+    margin-inline: auto;
+    font-size: 2.5rem;
+    color: #ffffff;
+    position: relative;
+    background: var(--azul);
+    padding-bottom: 10px;
+    padding-inline: 20px;
+    border-radius: 12px;
+    z-index: 0;
+    max-width: 700px;
+}
+
+.h1-index {
+    box-shadow: 5px 5px 0 white;
+}
+
+.principalConteudo > p {
+    width: 60%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background: var(--azul);
+    border-radius: 10px;
+    color: aliceblue;
+    margin-top: 30px;
+    padding-block: 10px;
+    box-shadow: 5px 5px 0 white;
+}
+
+.flipCards {
+    display: flex;
+    gap: 7%;
+    padding: 4rem 2rem;
+    background-color: #08405f;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.flipCards > a {
+    width: 25%;
+    max-width: 400px;
+    cursor: pointer;
+}
+
+.flipCard {
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.4s;
+}
+
+.frente,
+.verso {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.425);
+}
+
+.verso {
+    position: absolute;
+    left: 0;
+    transform: rotateY(180deg) translateZ(1px);
+}
+
+.flipCards > a:hover .flipCard {
+    transform: rotateY(180deg) scale(1.1);
+}
+
+.rodape {
+    text-align: center;
+    background-color: var(--azul);
+    color: #e6f6f8;
+    font-size: 0.9rem;
+    height: 50px;
+}
+
+.efeitoScroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.efeitoScroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CADASTRO */
+
+.cadastro-container {
+    background: url(../img/papel.jpg) center / cover;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.418);
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+}
+
+.cadastro-container h1 {
+    font-size: 2rem;
+    color: var(--azul-escuro);
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.btn {
+    border: none;
+    background: var(--azul-escuro);
+    width: 90px;
+    padding-block: 12px;
+    border-radius: 20px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 0 0 auto;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease-out;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: var(--azulEscuro);
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.form-group input:hover {
+    background: #d0eeff;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--azul-claro);
+    background: #276d96;
+    caret-color: white;
+    color: white;
+}
+
+.form-group:hover {
+    transform: scale(1.04);
+}
+
+.saudacaoTela {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: #08415fb4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s;
+}
+
+.saudacaoBox {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+}
+
+.saudacaoBox > button {
+    background: white;
+    color: var(--azul);
+    font-weight: bolder;
+    border: 2px solid #08405f;
+}
+
+.saudacaoBox > button:hover {
+    transform: scale(1.15);
+}
+
+.mostrarSaudacao {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.btnSaudacao {
+    border: 2px solid white;
+}
+
+.efeitoLink {
+    position: relative;
+    display: inline-block;
+}
+
+.efeitoLink:hover {
+    color: rgb(64, 209, 214);
+}
+
+.efeitoLink::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: 5px;
+    height: 3px;
+    width: 100%;
+    background: #ffffff;
+    background-size: 500%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-out;
+}
+
+label.efeitoLink::after {
+    background: #175375;
+}
+
+.efeitoLink:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/*============
+PÁGINA SOBRE 
+============= */
+
+.containerSobre {
+    max-width: 1000px;
+    background: url(../img/papel.jpg) center / cover;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.658);
+}
+
+.h1-sobre {
+    font-size: 2rem;
+}
+
+.intro {
+    font-size: 1.1rem;
+}
+
+.conteudo {
+    text-align: left;
+}
+
+.conteudo h2 {
+    color: var(--azul-escuro);
+    margin-top: 30px;
+}
+
+.conteudo ul {
+    padding-left: 20px;
+}
+
+.conteudo ul li {
+}
+
+.h2sobre {
+    margin-top: 30px;
+}
+
+#sobreCadastro {
+    font-size: 1.2rem;
+}
+
+/* ===========
+CONTADOR 
+==========*/
+
+.principalContador {
+    flex-direction: column;
+}
+
+.containerContador {
+    background: url(../img/papel.jpg) center / cover;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.466);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    overflow: hidden;
+}
+
+label {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#habitos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    margin-top: 20px;
+}
+
+.check {
+    cursor: pointer;
+}
+
+#litros {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#resultado {
+    transition: 1s;
+    font-size: 1.5rem;
+}
+
+.escondido {
+    position: relative;
+    transform: translateX(350px);
+}
+
+.rodape {
+    background-color: var(--azul);
+    color: #e6f6f8;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.btnImprimir {
+    margin: auto;
+    width: auto;
+    padding-inline: 10px;
+}
+
+/*===========
+REGISTROS 
+=============*/
+
+.registrosContainer {
+    min-height: 60vh;
+    background: url(../img/papel.jpg) center / cover;
+    border-radius: 20px;
+    height: 600px;
+    overflow: auto;
+}
+
+.registrosTable {
+    width: 100%;
+    border-spacing: 0;
+    border-radius: 20px;
+    border: 1px solid #175375;
+    overflow: hidden;
+    color: black;
+    
+}
+
+.registrosTable th {
+    min-width: 100px;
+    background: var(--azul);
+    color: white;
+}
+
+td, th {
+    height: 35px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+td{
+    padding-inline: 10px;
+}
+
+tr {
+    transition: 0.15s;
+}
+
+tr > th {
+    border-right: 1px solid #000000;
+}
+
+tr > td {
+    border-right: 1px solid #175375;
+}
+
+.registrosTable tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.493);
+}
+
+.registrosTable tr:nth-child(odd) {
+    background: #1753754d;
+}
+
+.registrosTable tr:hover {
+    background: #4f8caf;
+}
+
+.registrosTable tr.toggle {
+    background-color: #6669f5;
+    color: white;
+}
+
+.registrosTools {
+    background: white;
+    max-width: 50px;
+    margin-left: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.596);
+}
+
+.registrosTools > img {
+    width: 80%;
+    margin-block: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.registrosTools > img:hover {
+    transform: scale(1.25);
+}
+
+#caixaPesquisa {
+    position: relative;
+}
+
+#pesquisa {
+    padding: 5px;
+    padding-left: 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    color: var(--azul);
+    caret-color: var(--azul);
+    transition: 0.4s;
+}
+
+#pesquisa:focus {
+    background: rgb(186, 222, 255);
+}
+
+#lupinha {
+    width: 30px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#limparPesquisa {
+    position: absolute;
+    top: 4px;
+    right: 7px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#pesquisa:focus {
+    border: none;
+    outline: none;
+}
+
+#confirmarExclusao {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background: rgba(255, 0, 0, 0.568);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    opacity: 0;
+    transition: 0.4s;
+    pointer-events: none;
+}
+#confirmarExclusao.mostrando {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.msgExclusao {
+    color: white;
+    font-size: 50px;
+}
+
+#escolhaExclusao {
+    color: white;
+    font-size: 40px;
+}
+
+#escolhaExclusao span {
+    transition: 0.4s;
+    margin-inline: 20px;
+    cursor: pointer;
+}
+
+#escolhaExclusao span:hover {
+    color: var(--azul);
+}
+
+#btnAlterar{
+    margin-top: 20px;
+    float: right;
+}
+

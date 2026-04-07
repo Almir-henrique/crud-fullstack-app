@@ -1,0 +1,83 @@
+@media (max-width: 650px) {
+    .sobre .intro {
+        font-size: 1.1rem;
+        text-align: start;
+    }
+
+    .sobre {
+        padding-inline: 0px;
+    }
+
+    .flipCards {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 40px;
+    }
+
+    .menuBurguer {
+        display: inline-block;
+        width: 50px;
+        cursor: pointer;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #08405f;
+        z-index: 1;
+        flex-direction: column;
+        row-gap: 5px;
+        justify-content: space-around;
+        align-items: center;
+        clip-path: circle(0px at 100% 0%);
+        transition: 1s;
+    }
+
+    .nav.mostrarBurguer {
+        clip-path: circle(2000px at 100% 0%);
+    }
+
+    .nav a {
+        font-size: 2rem;
+    }
+
+    .fechar {
+        position: fixed;
+        top: 28px;
+        right: 35px;
+        display: inline-block;
+        font-size: 2rem;
+        cursor: pointer;
+        font-family: "Segoe UI";
+        font-weight: lighter;
+    }
+
+    .flipCards a {
+        width: 60%;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    p.p-index {
+        font-size: 1.2rem;
+    }
+
+    .principalConteudo h1 {
+        font-size: 1.8rem;
+    }
+
+    .h1-sobre {
+        font-size: 1.7rem;
+        text-align: left;
+    }
+
+    .intro {
+        font-size: 1.1rem;
+        text-align: left;
+    }
+}

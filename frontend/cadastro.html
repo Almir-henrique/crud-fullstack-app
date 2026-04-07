@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cadastro - Vida na Água</title>
+        <link rel="stylesheet" href="styles/indexStyle.css" />
+        <link rel="stylesheet" href="styles/responsive.css" />
+        <script src="scripts/pages/MenuBurguer.js" defer></script>
+        <script type="module" src="scripts/pages/Cadastro.js" defer></script>
+    </head>
+    <body>
+        <header class="menuBar">
+            <a href="index.html"
+                ><img src="img/logo.png" class="logo efeitoLink"/>
+            </a>
+            <nav class="nav">
+                <a href="contador.html" class="efeitoLink"
+                    >Contador de Litros</a>
+                <a href="index.html" class="efeitoLink">Início</a>
+                <a href="sobre.html" class="efeitoLink">Conheça a ODS</a>
+                <a href="registros.html" class="efeitoLink">Registros</a>
+                <span class="fechar">X</span>
+            </nav>
+            <img src="img/icons/menuBurguer.png" alt="" class="menuBurguer" />
+        </header>
+
+        <main class="principal">
+            <section class="cadastro-container delay">
+                <h1 style="background: transparent">Crie sua conta</h1>
+                <form class="cadastro-form">
+                    <div class="form-group">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" name="nome" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="idade">Idade</label>
+                        <input
+                            type="number"
+                            id="idade"
+                            name="idade"
+                            required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="endereco">Endereço</label>
+                        <input
+                            type="text"
+                            id="endereco"
+                            name="endereco"
+                            required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmar-senha">Confirmar senha</label>
+                        <input
+                            type="password"
+                            id="confirmar-senha"
+                            name="confirmar-senha"
+                            required/>
+                    </div>
+                    <button type="submit" class="btn">Enviar</button>
+                    <div class="saudacaoTela">
+                        <div class="saudacaoBox">
+                            <p>
+                                Obrigado por ajudar nosso planeta! <br />
+                                Você será direcionado para a página principal.
+                            </p>
+                            <a href="index.html">
+                                <button type="button" class="btn btnSaudacao">
+                                    Ok
+                                </button></a>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer class="rodape">
+            <p>© 2025 Vida na Água &mdash; Juntos pelos oceanos</p>
+        </footer>
+    </body>
+</html>
