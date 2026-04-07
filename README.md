@@ -96,11 +96,5 @@ Integrar front-end com back-end
 Trabalhar com API REST
 Manipular banco de dados MySQL
 
-👨‍💻 Grupo:
-Almir Henrique Dantas -matricula - 01863982
-Antonio carlos -matricula -
-Felipe Gomes -matricula -
-Rodrigo José -matricula -
-Matheus Gomes -matricula -
-Gabriel Pereira -matricula -
-Victor Soares -matricula -
+👨‍💻 CRIADOR:
+Almir Henrique Dantas -matricula 
